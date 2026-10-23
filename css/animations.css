@@ -1,0 +1,24 @@
+@keyframes slide-text {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide-text 30s linear infinite;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ticker-track {
+    animation: none;
+  }
+}
